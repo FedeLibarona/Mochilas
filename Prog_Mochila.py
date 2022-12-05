@@ -44,13 +44,13 @@ while True:
      comenzar = input("¿ Comenzar/Seguir?")   
      if comenzar == "Y":
           while True:
-             tamano = int(input("ingrese tamano"))
-             if tamano > 8 or tamano == 0 :
+              tamano = int(input("ingrese tamano"))
+              if tamano > 8 or tamano == 0 :
                 print("Pone un tamano valido")
-             else: 
-               print("Genial")
-               break
-             continue
+              else: 
+                print("Genial")
+                break
+              continue
    
           while True:
              marcas =(input("ingresemarcas"))
@@ -63,21 +63,24 @@ while True:
 
      
           while True:
-               if marcas == "JHON FOOS" and marcas == "WILSON":
+               if marcas == "JHON FOOS" or marcas == "WILSON":
                   cuentamarca+=1
-                  print(cuentamarca)
+                  print(f"""MarcaElegida: {cuentamarca}_{marcas}""")
                   break
-              
-  
+               else:
+                       break
+               
           while True:    
-            if tamano >0 or tamano <9:
-             cuentatamano+=1
-             print(cuentatamano)
-            break
-          continue
+            if tamano >0 and tamano <9:
+               cuentatamano+=1
+               print(f"""TamanoElegido: {cuentatamano}-{tamano}""")
+               break
+            else:
+                    break
      else:
-      print("Gracias")
-      break 
+        print("Gracias")
+        break 
+     continue
   
  
         
