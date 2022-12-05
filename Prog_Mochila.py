@@ -16,7 +16,10 @@ import openpyxl
 
 
 #main-resources
+
 continuamos = N, Y
+continuar = Y,N
+comenzar = "Y"
 
 marcas = "JHON FOOS", "WILSON" 
 
@@ -35,71 +38,49 @@ cuentatamanototal =  cuentatamano
 #tamano = input("ingrese tamano")
 #print ("usted quiere, " + tamano)
  
-    
-    
-    
+     
+ 
 while True:
-        tamano = int(input("ingrese tamano"))
-        if tamano > 8 or tamano == 0 :
-              print("Pone un tamano valido")
-        else: 
-              print("Genial")
-              break
-        continue
+     comenzar = input("¿ Comenzar/Seguir?")   
+     if comenzar == "Y":
+          while True:
+             tamano = int(input("ingrese tamano"))
+             if tamano > 8 or tamano == 0 :
+                print("Pone un tamano valido")
+             else: 
+               print("Genial")
+               break
+             continue
+   
+          while True:
+             marcas =(input("ingresemarcas"))
+             if marcas != "JHON FOOS" and marcas != "WILSON":
+                print("Pone marca valida")
+             else:
+                print ("Genial")
+                break
+             continue
 
-while True:
-        marcas =(input("ingresemarcas"))
-        if marcas != "JHON FOOS" and marcas != "WILSON":
-         print("Pone marcas")
-        else:
-            print ("Genial")
+     
+          while True:
+               if marcas == "JHON FOOS" and marcas == "WILSON":
+                  cuentamarca+=1
+                  print(cuentamarca)
+                  break
+              
+  
+          while True:    
+            if tamano >0 or tamano <9:
+             cuentatamano+=1
+             print(cuentatamano)
             break
-        continue
-    
-    
-    
-    #definimos la forma de importacion
-wb = openpyxl.load_workbook ( "C:\Desarrollo\Git\clientes.xlsx")
-
-ws = wb ["clientes"]
-
-print ("wb.sheetname")
-
- #fecha entrega 
+          continue
+     else:
+      print("Gracias")
+      break 
+  
  
-
- #cambio en la variables (contador)#variable de contador 
-    
- #clase que cuenta de forma generica e imprime en consola
- 
- 
-
-
-
-     #calendario-utilidad en calendario.py
-
-
-     #cambios en las variables (CONTADOR)
-     #CLASE QUE CUENTA DE FORMA GENERICA E IMPRIME EN CONSOLA
-     
-while True:
-        if marcas == "JHON FOOS" and marcas == "WILSON":
-         cuentamarca+=1
-         print(cuentamarca)
-         break
-        continue
-while True:    
-        if tamano >0 or tamano <9:
-         cuentatamano+=1
-         print(cuentatamano)
-        break
-
-while True:
-        continuamos = print("¿Quiere continuar?")
-        if continuamos != N:
-          print("muchas gracias")
-          break
-     
+        
            
     
         
